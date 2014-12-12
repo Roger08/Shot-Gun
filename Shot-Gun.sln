@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editeur Objets", "Editeur Objets\Editeur Objets.csproj", "{42A63F71-E22B-4D4F-88A5-99D5B5469428}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editeur Maps", "Editeur Maps\Editeur Maps.csproj", "{B22F0CF7-34C6-4E93-9749-95ABC9AA92ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{42A63F71-E22B-4D4F-88A5-99D5B5469428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42A63F71-E22B-4D4F-88A5-99D5B5469428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42A63F71-E22B-4D4F-88A5-99D5B5469428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22F0CF7-34C6-4E93-9749-95ABC9AA92ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22F0CF7-34C6-4E93-9749-95ABC9AA92ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22F0CF7-34C6-4E93-9749-95ABC9AA92ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22F0CF7-34C6-4E93-9749-95ABC9AA92ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

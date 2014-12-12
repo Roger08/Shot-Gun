@@ -32,13 +32,15 @@
             this.scrlPic = new System.Windows.Forms.HScrollBar();
             this.chkBlocking = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPic)).BeginInit();
             this.SuspendLayout();
             // 
             // picPic
             // 
             this.picPic.BackColor = System.Drawing.Color.Black;
-            this.picPic.Location = new System.Drawing.Point(9, 12);
+            this.picPic.Location = new System.Drawing.Point(9, 56);
             this.picPic.Name = "picPic";
             this.picPic.Size = new System.Drawing.Size(32, 32);
             this.picPic.TabIndex = 0;
@@ -46,15 +48,17 @@
             // 
             // scrlPic
             // 
-            this.scrlPic.Location = new System.Drawing.Point(9, 56);
+            this.scrlPic.LargeChange = 1;
+            this.scrlPic.Location = new System.Drawing.Point(9, 100);
             this.scrlPic.Name = "scrlPic";
             this.scrlPic.Size = new System.Drawing.Size(306, 17);
             this.scrlPic.TabIndex = 1;
+            this.scrlPic.ValueChanged += new System.EventHandler(this.scrlPic_ValueChanged);
             // 
             // chkBlocking
             // 
             this.chkBlocking.AutoSize = true;
-            this.chkBlocking.Location = new System.Drawing.Point(12, 95);
+            this.chkBlocking.Location = new System.Drawing.Point(12, 139);
             this.chkBlocking.Name = "chkBlocking";
             this.chkBlocking.Size = new System.Drawing.Size(68, 17);
             this.chkBlocking.TabIndex = 2;
@@ -63,24 +67,45 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(216, 139);
+            this.button1.Location = new System.Drawing.Point(216, 183);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Sauvegarder";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nom :";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(50, 19);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(262, 20);
+            this.txtName.TabIndex = 5;
             // 
             // frmGroundEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 174);
+            this.ClientSize = new System.Drawing.Size(324, 218);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chkBlocking);
             this.Controls.Add(this.scrlPic);
             this.Controls.Add(this.picPic);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmGroundEditor";
-            this.Text = "frmGroundEditor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Editeur de sol";
             this.Load += new System.EventHandler(this.frmGroundEditor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPic)).EndInit();
             this.ResumeLayout(false);
@@ -94,5 +119,7 @@
         private System.Windows.Forms.HScrollBar scrlPic;
         private System.Windows.Forms.CheckBox chkBlocking;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtName;
     }
 }

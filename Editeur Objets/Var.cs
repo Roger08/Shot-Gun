@@ -8,6 +8,8 @@ namespace Editeur_Objets
 {
     public static class Var
     {
+        public static BinaryDatabase fileDB = new BinaryDatabase();
         public static byte currentData;
+        public static bool changed;
     }
 }

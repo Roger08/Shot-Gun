@@ -7,27 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using System.IO; 
 
 namespace Editeur_Objets
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public static BinaryDatabase fileDB = new BinaryDatabase();
 
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
         }
 
         // Initialise les sols existants
         private void InitializeGrounds()
-        { 
+        {
+            lstGrounds.Items.Clear();
             for (byte i=0; i<100; i++)
             {
                 if (File.Exists("Sols/Sol" + i + ".dat"))
                 {
-                    fileDB.LoadGround(i);
+                    Var.fileDB.LoadGround(i);
+                    lstGrounds.Items.Add(Var.fileDB.arrGround[i].name);
                 }
             }
         }
@@ -41,12 +42,28 @@ namespace Editeur_Objets
         {
             for (byte i = 0; i < 100; i++)
             {
-                if (fileDB.arrGround[i] == null)
+                if (Var.fileDB.arrGround[i] == null)
                 {
                     Var.currentData = i;
                     break;
                 }
             }
+            Form launcher = new frmGroundEditor();
+            launcher.Show();
+        }
+
+        private void tmrRefresh_Tick(object sender, EventArgs e)
+        {
+            if (Var.changed)
+            {
+                InitializeGrounds();
+                Var.changed = false;
+            }
+        }
+
+        private void lstGrounds_DoubleClick(object sender, EventArgs e)
+        {
+            Var.currentData = (byte)(lstGrounds.SelectedIndex);
             Form launcher = new frmGroundEditor();
             launcher.Show();
         }

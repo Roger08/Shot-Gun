@@ -9,7 +9,15 @@ namespace Editeur_Objets
     [Serializable()]
     public class Ground
     {
+        public string name;
         public byte pic;
         public bool blocking;
+
+        public Ground()
+        {
+            name = "";
+            pic = 0;
+            blocking = false;
+        }
     }
 }

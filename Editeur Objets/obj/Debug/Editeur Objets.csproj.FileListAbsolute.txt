@@ -3,9 +3,9 @@ C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\bin\Debug\Editeur Objets.
 C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\bin\Debug\Editeur Objets.exe
 C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\bin\Debug\Editeur Objets.pdb
 C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\obj\Debug\Editeur Objets.csprojResolveAssemblyReference.cache
-C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\obj\Debug\Editeur_Objets.Form1.resources
 C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\obj\Debug\Editeur_Objets.Properties.Resources.resources
 C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\obj\Debug\Editeur Objets.csproj.GenerateResource.Cache
 C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\obj\Debug\Editeur Objets.exe
 C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\obj\Debug\Editeur Objets.pdb
 C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\obj\Debug\Editeur_Objets.frmGroundEditor.resources
+C:\Users\Hugo\Documents\GitHub\Shot-Gun\Editeur Objets\obj\Debug\Editeur_Objets.frmMain.resources

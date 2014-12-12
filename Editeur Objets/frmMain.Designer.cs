@@ -1,6 +1,6 @@
 ﻿namespace Editeur_Objets
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.lstGrounds = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tmrRefresh = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,23 +48,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sols";
             // 
-            // lstGrounds
-            // 
-            this.lstGrounds.FormattingEnabled = true;
-            this.lstGrounds.Location = new System.Drawing.Point(6, 19);
-            this.lstGrounds.Name = "lstGrounds";
-            this.lstGrounds.Size = new System.Drawing.Size(219, 277);
-            this.lstGrounds.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(262, 32);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(237, 305);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Objets";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(6, 302);
@@ -73,16 +58,40 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // lstGrounds
+            // 
+            this.lstGrounds.FormattingEnabled = true;
+            this.lstGrounds.Location = new System.Drawing.Point(6, 19);
+            this.lstGrounds.Name = "lstGrounds";
+            this.lstGrounds.Size = new System.Drawing.Size(219, 277);
+            this.lstGrounds.TabIndex = 0;
+            this.lstGrounds.DoubleClick += new System.EventHandler(this.lstGrounds_DoubleClick);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(262, 32);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(237, 305);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Objets";
+            // 
+            // tmrRefresh
+            // 
+            this.tmrRefresh.Enabled = true;
+            this.tmrRefresh.Interval = 1000;
+            this.tmrRefresh.Tick += new System.EventHandler(this.tmrRefresh_Tick);
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 379);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Menu principal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -95,6 +104,7 @@
         private System.Windows.Forms.ListBox lstGrounds;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer tmrRefresh;
     }
 }
 
